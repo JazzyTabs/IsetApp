@@ -1,5 +1,6 @@
 package com.thabang.iset.dto;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
  *
  * @author MokomaneMB
  */
-public class EventsDTO  {
+public class EventsDTO implements Serializable {
 
     private Integer eventID;
     private String eventName;
@@ -22,7 +23,7 @@ public class EventsDTO  {
     }
 
     public EventsDTO(Integer eventID, String eventName,  String  eventLocation,Date eventDate, Integer coachMentorID, Integer isetRootUsersID,
-                     List<PhotouploadDTO> photouploadList) {
+                     byte[] photouploadList) {
         this.eventID = eventID;
         this.eventName =eventName ;
         this.eventLocation = eventLocation;
