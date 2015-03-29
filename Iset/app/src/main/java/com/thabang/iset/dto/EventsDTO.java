@@ -1,9 +1,7 @@
 package com.thabang.iset.dto;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 /**
  *
@@ -17,7 +15,7 @@ public class EventsDTO implements Serializable {
     private Date eventDate;
     private Integer coachMentorID;
     private Integer isetRootUsersID;
-    private List<PhotouploadDTO> photouploadList = new ArrayList<>();
+    private byte[] photouploadList;
 
     public EventsDTO() {
     }
@@ -30,7 +28,7 @@ public class EventsDTO implements Serializable {
         this.eventDate = eventDate;
         this.coachMentorID = coachMentorID;
         this.isetRootUsersID =isetRootUsersID;
-        this.photouploadList =photouploadList;
+        this.photouploadList = photouploadList;
 
     }
 
@@ -82,11 +80,11 @@ public class EventsDTO implements Serializable {
         this.isetRootUsersID = isetRootUsersID;
     }
 
-    public List<PhotouploadDTO> getPhotouploadList() {
+    public byte[] getPhotouploadList() {
         return photouploadList;
     }
 
-    public void setPhotouploadList(List<PhotouploadDTO> photouploadList) {
+    public void setPhotouploadList(byte[] photouploadList) {
         this.photouploadList = photouploadList;
     }
 }

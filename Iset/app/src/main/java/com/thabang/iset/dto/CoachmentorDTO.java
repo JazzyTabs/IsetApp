@@ -21,13 +21,10 @@ public class CoachmentorDTO implements Serializable {
     private List<IsetrootusersDTO> isetrootusersList = new ArrayList<>();
     private List<EventsDTO> eventsList = new ArrayList<>();
 
-    public CoachmentorDTO() {
+    public CoachmentorDTO(String name, String lastname, Integer idnumber, Integer cellnum, String address, String email, Integer kid) {
     }
 
-    public CoachmentorDTO(Integer coachMentorID, Integer kidsID, String coachMentorName, String coachMentorLastName,
-                          Integer coachMentorIDNumber, Integer coachMentorCellNum, String coachMentorAddress,
-                          String coachMentorEmail, List<PhotouploadDTO> photouploadList, List<IsetrootusersDTO> isetrootusersList,
-                          List<EventsDTO> eventsList) {
+    public CoachmentorDTO(Integer coachMentorID, Integer kidsID, String coachMentorName, String coachMentorLastName, int coachMentorIDNumber, int coachMentorCellNum, String coachMentorAddress, String coachMentorEmail, List<PhotouploadDTO> photouploadList, List<IsetrootusersDTO> isetrootusersList, List<EventsDTO> eventsList) {
         this.coachMentorID = coachMentorID;
         this.kidsID = kidsID;
         this.coachMentorName = coachMentorName;
@@ -39,8 +36,6 @@ public class CoachmentorDTO implements Serializable {
         this.photouploadList = photouploadList;
         this.isetrootusersList = isetrootusersList;
         this.eventsList = eventsList;
-
-
     }
 
     public Integer getCoachMentorID() {
@@ -49,6 +44,14 @@ public class CoachmentorDTO implements Serializable {
 
     public void setCoachMentorID(Integer coachMentorID) {
         this.coachMentorID = coachMentorID;
+    }
+
+    public Integer getKidsID() {
+        return kidsID;
+    }
+
+    public void setKidsID(Integer kidsID) {
+        this.kidsID = kidsID;
     }
 
     public String getCoachMentorName() {
@@ -99,14 +102,6 @@ public class CoachmentorDTO implements Serializable {
         this.coachMentorEmail = coachMentorEmail;
     }
 
-    public Integer getKidsID() {
-        return kidsID;
-    }
-
-    public void setKidsID(Integer kidsID) {
-        this.kidsID = kidsID;
-    }
-
     public List<PhotouploadDTO> getPhotouploadList() {
         return photouploadList;
     }
@@ -130,5 +125,4 @@ public class CoachmentorDTO implements Serializable {
     public void setEventsList(List<EventsDTO> eventsList) {
         this.eventsList = eventsList;
     }
-
 }

@@ -75,7 +75,7 @@ public class EventContentProvider  extends ContentProvider{
 
     @Override
     public Uri insert(Uri uri, ContentValues contentValues) {
-        
+
         int requestType = uriMatcher.match(uri);
         if(requestType != EventsContentProvidersUtil.QUERY_TYPE_LIST){
             throw new IllegalArgumentException("Invalid URI pattern for insert Operation.");
