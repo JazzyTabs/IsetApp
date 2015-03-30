@@ -1,6 +1,5 @@
 package com.thabang.iset.dto;
 
-import com.thabang.iset.data.*;
 
 import java.util.Date;
 
@@ -18,12 +17,11 @@ public class VideosDTO {
     public VideosDTO() {
     }
 
-    public VideosDTO(Videos v) {
-        this.videoID = v.getVideoID();
-        this.videoName = v.getVideoName();
-        this.videoDate = v.getVideoDate();
-        this.isetRootUsersID = v.getIsetRootUsers().getIsetRootUsersID();
-
+    public VideosDTO(Integer videoID, String videoName, Date videoDate, Integer isetRootUsersID) {
+        this.videoID = videoID;
+        this.videoName = videoName;
+        this.videoDate = videoDate;
+        this.isetRootUsersID = isetRootUsersID;
     }
 
     public Integer getVideoID() {

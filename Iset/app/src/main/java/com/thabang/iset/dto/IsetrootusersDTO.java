@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author MokomaneMB
  */
 public class IsetrootusersDTO {
@@ -22,16 +21,22 @@ public class IsetrootusersDTO {
     private List<VideosDTO> videosList = new ArrayList<>();
     private List<EventsDTO> eventsList = new ArrayList<>();
 
-    public IsetrootusersDTO() {
+    public IsetrootusersDTO(int i, String name, String lastname, int i1, int i2, String address, String email, int i3, int i4) {
     }
 
-    public IsetrootusersDTO(Integer isetRootUsersID, Integer coachMentorID, Integer teamID, Integer isetRootUsersCellNum,
-                            Integer isetRootUsersIDNumber) {
+    public IsetrootusersDTO(Integer isetRootUsersID, String isetRootUsersName, String isetRootUsersLastName, int isetRootUsersIDNumber, int isetRootUsersCellNum, String isetRootUsersAddress, String isetRootUsersEmail, Integer coachMentorID, Integer teamID, List<PhotouploadDTO> photouploadList, List<VideosDTO> videosList, List<EventsDTO> eventsList) {
         this.isetRootUsersID = isetRootUsersID;
+        this.isetRootUsersName = isetRootUsersName;
+        this.isetRootUsersLastName = isetRootUsersLastName;
+        this.isetRootUsersIDNumber = isetRootUsersIDNumber;
+        this.isetRootUsersCellNum = isetRootUsersCellNum;
+        this.isetRootUsersAddress = isetRootUsersAddress;
+        this.isetRootUsersEmail = isetRootUsersEmail;
         this.coachMentorID = coachMentorID;
         this.teamID = teamID;
-        this.isetRootUsersCellNum = isetRootUsersCellNum;
-        this.isetRootUsersIDNumber = isetRootUsersIDNumber;
+        this.photouploadList = photouploadList;
+        this.videosList = videosList;
+        this.eventsList = eventsList;
     }
 
     public Integer getIsetRootUsersID() {

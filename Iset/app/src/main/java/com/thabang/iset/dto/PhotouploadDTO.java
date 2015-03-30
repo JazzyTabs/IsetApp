@@ -1,6 +1,6 @@
 package com.thabang.iset.dto;
 
-import com.thabang.iset.data.*;
+
 
 import java.util.Date;
 
@@ -24,19 +24,7 @@ public class PhotouploadDTO {
     public PhotouploadDTO() {
     }
 
-    public PhotouploadDTO(Photoupload p) {
-        this.photoUploadID = p.getPhotoUploadID();
-        this.photoDate = p.getPhotoDate();
-        this.kidPicture = p.getKidPicture();
-        this.coachMentorPicture = p.getCoachMentorPicture();
-        this.eventPicture = p.getEventPicture();
-        this.isetrootusersPicture = p.getIsetrootusersPicture();
-        this.coachMentorID = p.getCoachMentor().getCoachMentorID();
-        this.eventID = p.getEvent().getEventID();
-        this.isetRootUsersID = p.getIsetRootUsers().getIsetRootUsersID();
-        this.kidID = p.getKid().getKidID();
-        
-    }
+
 
     public Integer getPhotoUploadID() {
         return photoUploadID;

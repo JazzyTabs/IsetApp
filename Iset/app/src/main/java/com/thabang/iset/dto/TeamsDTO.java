@@ -1,7 +1,5 @@
 package com.thabang.iset.dto;
 
-import com.thabang.iset.data.Teams;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,14 +24,18 @@ public class TeamsDTO {
     public TeamsDTO() {
     }
 
-    public TeamsDTO(Teams t) {
-        this.teamID = t.getTeamID();
-        this.teamName = t.getTeamName();
-        this.teamLocation = t.getTeamLocation();
-        this.teamAwards = t.getTeamAwards();
-        this.teamRegistration = t.getTeamRegistration();
-        this.teamImage = t.getTeamImage();
-
+    public TeamsDTO(Integer teamID, String teamName, String teamLocation, String teamAwards, String teamRegistration, byte[] teamImage, List<WroteamDTO> wroteamList, List<FtcteamDTO> ftcteamList, List<IsetrootusersDTO> isetrootusersList, List<FllteamDTO> fllteamList, List<KidsDTO> kidsList) {
+        this.teamID = teamID;
+        this.teamName = teamName;
+        this.teamLocation = teamLocation;
+        this.teamAwards = teamAwards;
+        this.teamRegistration = teamRegistration;
+        this.teamImage = teamImage;
+        this.wroteamList = wroteamList;
+        this.ftcteamList = ftcteamList;
+        this.isetrootusersList = isetrootusersList;
+        this.fllteamList = fllteamList;
+        this.kidsList = kidsList;
     }
 
     public Integer getTeamID() {

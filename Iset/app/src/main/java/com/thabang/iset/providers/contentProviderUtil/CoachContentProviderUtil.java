@@ -29,15 +29,15 @@ public class CoachContentProviderUtil {
     public static final int QUERY_TYPE_BY_COACH_ID = 2;
     public static final int QUERY_TYPE_LIST = 3;
 
-    //----------getting list of coaaches---------------------------
+    //----------getting list of coaches---------------------------
     public static List<CoachmentorDTO> getLanguages(ContentResolver contentResolver){
         List<CoachmentorDTO> coachList = new ArrayList<CoachmentorDTO>();
-        Cursor coaachListCursor = contentResolver.query(COACH_CONTENT_URI, CoachTable.DEFAULT_COACH_PROJECTIONS,null,null,CoachTable.COACH_CP_ORDER_ORDER);
-        if(coaachListCursor != null){
+        Cursor coachListCursor = contentResolver.query(COACH_CONTENT_URI, CoachTable.DEFAULT_COACH_PROJECTIONS,null,null,CoachTable.COACH_ORDER_ORDER);
+        if(coachListCursor != null){
             //we have the data, now we're iterating
-            while(coaachListCursor.moveToNext()){
+            while(coachListCursor.moveToNext()){
                 //get values from the cursor
-                CoachmentorDTO coach = fromCursor(coaachListCursor);
+                CoachmentorDTO coach = fromCursor(coachListCursor);
                 coachList.add(coach);
             }
         }

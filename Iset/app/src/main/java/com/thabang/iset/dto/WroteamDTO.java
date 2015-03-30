@@ -1,7 +1,5 @@
 package com.thabang.iset.dto;
 
-import com.thabang.iset.data.*;
-
 /**
  *
  * @author MokomaneMB
@@ -16,12 +14,11 @@ public class WroteamDTO {
     public WroteamDTO() {
     }
 
-    public WroteamDTO(Wroteam w) {
-        this.wroTeamID = w.getWroTeamID();
-        this.wroTeamLocation = w.getWroTeamLocation();
-        this.wroTeamCompetition = w.getWroTeamCompetition();
-        this.teamID = w.getTeam().getTeamID();       
-        
+    public WroteamDTO(Integer wroTeamID, String wroTeamLocation, String wroTeamCompetition, Integer teamID) {
+        this.wroTeamID = wroTeamID;
+        this.wroTeamLocation = wroTeamLocation;
+        this.wroTeamCompetition = wroTeamCompetition;
+        this.teamID = teamID;
     }
 
     public Integer getWroTeamID() {
