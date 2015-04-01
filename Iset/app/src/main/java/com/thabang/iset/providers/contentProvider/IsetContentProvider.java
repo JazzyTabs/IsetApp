@@ -49,7 +49,7 @@ public class IsetContentProvider extends ContentProvider{
                 //retrieving all --> select * from iset
                 break;
             case IsetContentProviderUtil.QUERY_TYPE_BY_COLUMN_ID:
-                //retrieving specific isetuser --> select * form students where ID=x
+                //retrieving specific isetuser --> select * form isetrootusers where ID=x
                 queryBuilder.appendWhere(IsetTable.COLUMN_CP_ISET_ID + "=" + uri.getLastPathSegment());
                 break;
             case IsetContentProviderUtil.QUERY_TYPE_BY_ISET_ID:
