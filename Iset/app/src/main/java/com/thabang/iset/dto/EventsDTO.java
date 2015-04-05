@@ -17,8 +17,6 @@ public class EventsDTO implements Serializable {
     private Integer isetRootUsersID;
     private byte[] photouploadList;
 
-    public EventsDTO() {
-    }
 
     public EventsDTO(Integer eventID, String eventName,  String  eventLocation,Date eventDate, Integer coachMentorID, Integer isetRootUsersID,
                      byte[] photouploadList) {
@@ -30,14 +28,6 @@ public class EventsDTO implements Serializable {
         this.isetRootUsersID =isetRootUsersID;
         this.photouploadList = photouploadList;
 
-    }
-
-    public Integer getEventID() {
-        return eventID;
-    }
-
-    public void setEventID(Integer eventID) {
-        this.eventID = eventID;
     }
 
     public String getEventName() {
@@ -86,5 +76,13 @@ public class EventsDTO implements Serializable {
 
     public void setPhotouploadList(byte[] photouploadList) {
         this.photouploadList = photouploadList;
+    }
+
+    public Integer getEventID() {
+        return eventID;
+    }
+
+    public void setEventID(Integer eventID) {
+        this.eventID = eventID;
     }
 }

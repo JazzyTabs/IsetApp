@@ -9,12 +9,10 @@
     <ImageView
         android:id="@+id/newImageRobot"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_alignParentLeft="true"
-        android:maxHeight="190dp"
         android:scaleType="fitXY"
-        android:adjustViewBounds="true"
-        android:src="@drawable/new_image2" />
+        android:src="@drawable/new_image1" />
 
     <Button
         android:background="#1E90FF"
@@ -45,18 +43,18 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="WELCOME TO I-SET"
         android:id="@+id/welcome"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/newImageRobot"
         android:layout_centerHorizontal="true" />
 
-    ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:maxHeight="80dp"
-        android:scaleType="fitXY"
-        android:adjustViewBounds="true"
-        android:src="@drawable/isetthabang"
-        android:layout_alignBottom="@+id/newImageRobot"
-        android:layout_centerHorizontal="true" />
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/imageView2"-->
+        <!--android:maxHeight="80dp"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:src="@drawable/isetthabang"-->
+        <!--android:layout_alignBottom="@+id/newImageRobot"-->
+        <!--android:layout_centerHorizontal="true" />-->
 
 </RelativeLayout>

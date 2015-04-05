@@ -1,18 +1,57 @@
 package data.android.unisa.com.iset;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.thabang.iset.dto.EventsDTO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity {
+    private List<EventsDTO> myEvents = new ArrayList<EventsDTO>();
+    Button btnLogIn;
+    Button btnSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        ActionBar actionBar = getActionBar();
+//        actionBar.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+
+//      populateEventList();
+        btnLogIn = (Button) findViewById(R.id.signup1);
+        btnLogIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Register.class);
+                startActivity(intent);
+            }
+        });
+        btnSignUp = (Button) findViewById(R.id.login1);
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),LogIn.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
+//    private void populateEventList() {
+//        myEvents.add(new EventsDTO(1,"Lusaka","Mamelodi",19,1,R.drawable.i_setimage));
+//        myEvents.add(new EventsDTO(1,"Lusaka","Mamelodi",14,1,R.drawable.isetthabang));
+//        myEvents.add(new EventsDTO(1,"Lusaka","Mamelodi",35,1,R.drawable.i_setimage));
+//    }
 
 
     @Override
@@ -36,4 +75,5 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
