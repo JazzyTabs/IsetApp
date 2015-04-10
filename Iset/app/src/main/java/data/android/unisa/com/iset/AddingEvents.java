@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.thabang.iset.dto.EventsDTO;
+import com.thabang.iset.providers.contentProviderUtil.EventsContentProvidersUtil;
+
 
 public class AddingEvents extends ActionBarActivity {
     Button btneventsList;
@@ -38,6 +41,10 @@ public class AddingEvents extends ActionBarActivity {
                 b.putString("location",txtLocation.getText().toString());
                 b.putString("date",txtDate.getText().toString());
                 intent.putExtra("EventBundle",b);
+
+               // EventsDTO eventsDTO = new EventsDTO(null, txtEventName,txtLocation,txtDate,1,1,null);
+                //add this to CP
+               // EventsContentProvidersUtil.addevent(getContentResolver(), eventsDTO);
                 startActivity(intent);
             }
         });

@@ -41,9 +41,10 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:id="@+id/btnSubmit"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/txtDate"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp" />
 
     <EditText
         android:layout_width="match_parent"

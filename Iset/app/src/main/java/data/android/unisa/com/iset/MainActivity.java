@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.thabang.iset.dto.EventsDTO;
 
@@ -19,15 +20,14 @@ public class MainActivity extends ActionBarActivity {
     private List<EventsDTO> myEvents = new ArrayList<EventsDTO>();
     Button btnLogIn;
     Button btnSignUp;
+    Button btnMap;
+    gpsActivity gps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        ActionBar actionBar = getActionBar();
-//        actionBar.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 
-//      populateEventList();
         btnLogIn = (Button) findViewById(R.id.signup1);
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +42,26 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),LogIn.class);
                 startActivity(intent);
+            }
+        });
+
+        btnMap = (Button) findViewById(R.id.btnMap);
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gps = new gpsActivity(MainActivity.this);
+
+                if(gps.canGetLocation()){
+                    double latitude = gps.getLatitude();
+                    double longitude = gps.getLongitude();
+
+                    Toast.makeText(getApplicationContext(),"You location is -\nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+                }else{
+                    gps.showSettingsAlert();
+                }
+
+//                Intent intent = new Intent(getApplicationContext(),gpsActivity.class);
+//                startActivity(intent);
             }
         });
 

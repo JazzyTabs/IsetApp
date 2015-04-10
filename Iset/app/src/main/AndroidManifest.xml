@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="data.android.unisa.com.iset" >
 
-    <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
+    <!-- AIzaSyAGgHRJEDiI04Kd91vw8SCuvOqi1xz3mnw -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/i_setimage"
@@ -33,6 +36,10 @@
         <activity
             android:name=".AddingEvents"
             android:label="@string/title_activity_adding_events" >
+        </activity>
+        <activity
+            android:name=".gpsActivity"
+            android:label="@string/title_activity_gps" >
         </activity>
     </application>
 

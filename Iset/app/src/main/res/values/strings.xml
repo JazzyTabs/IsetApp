@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">I-SET</string>
 
     <string name="action_settings">Settings</string>
@@ -8,4 +9,6 @@
     <string name="title_activity_logged_in">I-SET</string>
     <string name="title_activity_list_events">ListEvents</string>
     <string name="title_activity_adding_events">add event</string>
+    <string name="title_activity_gps">gpsActivity</string>
+    <string name="title_activity_thabangs">thabangs</string>
 </resources>
